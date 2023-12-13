@@ -173,7 +173,7 @@ aside .head h3 {
 .progresses {
   display: flex;
   flex-direction: column;
-  gap: 1.4em
+  gap: 1.4em;
 }
 
 .progresses p {
@@ -199,7 +199,7 @@ aside .head h3 {
 
 .progress-bar .progress {
   display: flex;
-  background-color: #8CB1FC;
+  background-color: #8cb1fc;
   border-radius: 99px;
 }
 
@@ -209,8 +209,36 @@ aside .head h3 {
   padding-top: 2.8em;
 }
 
-.time-card {
+.rise-set-time .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
 
+.rise-set-time .card {
+  background-color: #ffffff22;
+  border: 1px solid #8db4ff;
+}
+
+.rise-set-time h3,
+.rise-set-time p,
+.rise-set-time .card i {
+  color: #ffffff !important;
+}
+
+.rise-set-time p {
+  font-size: 1em !important;
+  font-weight: 300;
+}
+
+.rise-set-time h3 {
+  margin: 0px;
+  font-size: 1.6em;
+  font-weight: 400;
+}
+
+.rise-set-time .card .details {
+  gap: 0.2em !important;
 }
 
 /* Card Styles */
