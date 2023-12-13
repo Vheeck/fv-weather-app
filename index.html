@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="dashboard">
+      <main>
+        <header>
+          <div class="date">
+            <h2>January 2022</h2>
+            <p>Thursday, Jan 4, 2022</p>
+          </div>
+        </header>
+        <div class="container">
+          <div class="overview">
+            <div class="head">
+              <h3>Today overview</h3>
+            </div>
+            <div class="content">
+              <div class="row">
+                <div class="card">
+                  <div class="icon">
+                    <i class="fa-solid fa-wind"></i>
+                  </div>
+                  <div class="details">
+                    <p>Wind Speed</p>
+                    <h2>12km/h</h2>
+                  </div>
+                  <div class="change-rate">
+                    <i class="fa-solid fa-caret-down"></i>
+                    <p>2km/h</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="icon">
+                    <i class="fa-solid fa-cloud-rain"></i>
+                  </div>
+                  <div class="details">
+                    <p>Rain Chanse</p>
+                    <h2>24%</h2>
+                  </div>
+                  <div class="change-rate">
+                    <i class="fa-solid fa-caret-up"></i>
+                    <p>10%</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="card">
+                  <div class="icon">
+                    <i class="fa-solid fa-water"></i>
+                  </div>
+                  <div class="details">
+                    <p>Pressure</p>
+                    <h2>720 hpa</h2>
+                  </div>
+                  <div class="change-rate">
+                    <i class="fa-solid fa-caret-up"></i>
+                    <p>32 hpa</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="icon">
+                    <i class="fa-solid fa-sun"></i>
+                  </div>
+                  <div class="details">
+                    <p>UV Index</p>
+                    <h2>2.3</h2>
+                  </div>
+                  <div class="change-rate">
+                    <i class="fa-solid fa-caret-down"></i>
+                    <p>0.3</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="average">
+            <div class="head">
+              <h3>Average Weekly Temperature</h3>
+            </div>
+            <div class="content">
+              <div>
+                <canvas id="myChart"></canvas>
+              </div>
+              <script>
+                const ctx = document.getElementById("myChart");
+
+                new Chart(ctx, {
+                  type: "line",
+                  data: {
+                    labels: ["Week 1", "Week 2", "Week 3", "Week 4"],
+                    datasets: [
+                      {
+                        label: "Temperatures",
+                        data: [17, 15, 23, 16],
+                        borderWidth: 8,
+                        borderColor: "#304F86",
+                        tension: 0.4,
+                        fill: true,
+                        backgroundColor: "#304F8611",
+                      },
+                    ],
+                  },
+                  options: {
+                    scales: {
+                      y: {
+                        beginAtZero: false,
+                      },
+                      x: {
+                        grid: {
+                          display: false,
+                        },
+                      },
+                    },
+                    plugins: {
+                      legend: {
+                        display: true,
+                        // labels: {
+                        //   color: "rgb(255, 99, 132)",
+                        // },
+                      },
+                    },
+                  },
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+      </main>
+      <aside>
+        <div class="location-time">
+          <div class="location">
+            <h2>Lorem Ipsum</h2>
+            <p>dolor set at</p>
+          </div>
+          <div><p class="time">02:53 PM</p></div>
+        </div>
+        <div class="temperature">
+          <div>
+            <i class="fa-solid fa-cloud"></i>
+          </div>
+          <div class="details">
+            <h2>20&deg; C</h2>
+            <p>Dramatic Cloudy</p>
+          </div>
+        </div>
+        <div class="chance-rain">
+          <div class="head">
+            <h3>Chance of rain</h3>
+          </div>
+          <div class="progresses">
+            <div class="row">
+              <p>7 PM</p>
+              <div class="progress-bar"><div class="progress" style="width: 44%;"></div></div>
+              <p>44%</p>
+            </div>
+            <div class="row">
+              <p>8 PM</p>
+              <div class="progress-bar"><div class="progress" style="width: 30%;"></div></div>
+              <p>30%</p>
+            </div>
+            <div class="row">
+              <p>9 PM</p>
+              <div class="progress-bar"><div class="progress" style="width: 67%;"></div></div>
+              <p>67%</p>
+            </div>
+            <div class="row">
+              <p>10 PM</p>
+              <div class="progress-bar"><div class="progress" style="width: 72%;"></div></div>
+              <p>72%</p>
+            </div>
+          </div>
+        </div>
+        <div class="rise-set-time">
+          <div class="head">
+            <h3>Sunrise & Sunset</h3>
+          </div>
+          <div>
+            <div class="time-card">
+              <div>
+                <div class="icon"></div>
+                <div class="details"></div>
+              </div>
+              <div class="time"></div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

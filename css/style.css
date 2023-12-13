@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: Poppins, sans-serif;
+}
+
+p {
+  margin: 0px;
+  color: #93969c;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+  color: #051f3f;
+}
+
+div.dashboard {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+main header {
+  padding: 3.4em 2.4em;
+  border-bottom: 2px solid #f4f8fd;
+  position: sticky;
+}
+
+main header h2 {
+  font-size: 2em;
+  font-weight: 800;
+}
+
+main header p {
+  font-size: 1.4em;
+}
+
+main .container {
+  padding: 2.4em 2.4em;
+}
+
+aside {
+  width: 35vw;
+  padding: 3.4em;
+  background-image: linear-gradient(
+    135deg,
+    #4b5e75 0%,
+    #132d53 20%,
+    #15387d 80%
+  );
+  overflow-y: scroll;
+}
+
+div.dashboard main {
+  flex: 1;
+}
+
+.overview {
+  padding-bottom: 3.2em;
+}
+
+.overview .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.overview .content .row {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.head {
+  margin-bottom: 1.6em;
+}
+
+.head h3 {
+  font-weight: 500;
+  font-size: 1.6em;
+}
+
+aside .head h3 {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+/* Location and Time */
+
+.location-time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.6em;
+}
+
+.location-time p {
+  color: #fff;
+  font-size: 1.3em;
+}
+
+.location-time .location h2 {
+  font-weight: 300;
+  color: #fff;
+  font-size: 2em;
+}
+
+.location-time .location p {
+  font-weight: 200;
+  color: #99a5b1;
+}
+
+.location-time .location {
+  display: flex;
+  flex-direction: column;
+}
+
+.location-time .time {
+  font-size: 1.6em;
+}
+
+/* Temperature */
+
+.temperature {
+  padding: 2.8em 0em;
+  border-bottom: solid 2px #ffffff33;
+}
+
+.temperature i {
+  color: #ffffff88;
+  font-size: 2em;
+}
+.temperature h2 {
+  color: #ffffff;
+  font-size: 4.5em;
+  font-weight: 400;
+}
+
+.temperature p {
+  color: #ffffffcc;
+  font-size: 1.6em;
+  width: min-content;
+  text-align: right;
+}
+
+.temperature .details {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Chance of Rain */
+
+.chance-rain {
+  padding-top: 2.8em;
+}
+
+.progresses {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4em
+}
+
+.progresses p {
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 1.2em;
+}
+
+.progresses .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.6em;
+}
+
+.progress-bar {
+  display: flex;
+  height: 2.4em;
+  background-color: #ffffff22;
+  border-radius: 99px;
+  flex: 1;
+}
+
+.progress-bar .progress {
+  display: flex;
+  background-color: #8CB1FC;
+  border-radius: 99px;
+}
+
+/* Sunrise and Sunset */
+
+.rise-set-time {
+  padding-top: 2.8em;
+}
+
+.time-card {
+
+}
+
+/* Card Styles */
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fbfbfb;
+  border-radius: 8px;
+  padding: 1.2em 2.4em;
+  width: 100%;
+  gap: 1.6em;
+}
+
+.card .icon i {
+  color: #0d50fd;
+  font-size: 1.8em;
+}
+
+.card .details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  flex: 1;
+}
+
+.card .details p {
+  font-size: 1.2em;
+}
+
+.card .details h2 {
+  font-size: 2.4em;
+  font-weight: 500;
+}
+
+.card .change-rate {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.card .change-rate p {
+  font-size: 1.3em;
+}
+
+.card .change-rate i {
+  font-size: 1.6em;
+}
+
+.card .change-rate i.fa-caret-down {
+  color: #ea2b2b;
+}
+
+.card .change-rate i.fa-caret-up {
+  color: #2f69fe;
+}
