@@ -49,4 +49,4 @@ const day = currentDate.getDate();
 const dayOfTheWeek = currentDate.getDay();
 
 monthYear.textContent = `${months[month]} ${year}`;
-date.textContent = `Thursday, Jan 4, ${year}`;
+date.textContent = `Thursday, Jan ${date}, ${year}`;
